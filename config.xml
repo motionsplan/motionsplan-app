@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.username.projectname"
+	id		= "com.lsolesen.motionsplan"
 	version 	= "0.0.1"
         versionCode     = "1">
 
-	<name>Application name</name>
+	<name>Motionsplan</name>
 
 	<description>         
 		Application description 
 	</description>
 
-	<author href="" email="">		
+	<author href="http://motionsplan.dk" email="lars@intraface.dk">		
 	</author>
         
 	<!--
