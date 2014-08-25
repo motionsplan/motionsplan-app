@@ -10,12 +10,11 @@
         <title>Simple HTML5 Mobile Application</title>
     </head>
     <body>
-        <div>
-            <h1>Simple HTML5 Mobile Application</h1>
-            <div id="ready">
-                <p class="listening">Connecting to Device</p>
-                <p class="received">Device is Ready</p>
-            </div>
+        <div data-role="header">
+            <h1>Motionsplan</h1>
+        </div>
+        <div data-role="content">
+          
         </div>
        
 
@@ -100,52 +99,38 @@ function Reset(form)  // Nødvendig for NN 2.x og IE 3.x
   form.weight.value = "";
 }
 //--><!]]>
-</script><form action="#" onsubmit="Calculate(this); return false">
-<table align="center" border="1" cellpadding="0" cellspacing="0">
-<tbody>
-<tr>
-<td>
-<table bgcolor="#c0c0c0" border="0" cellpadding="4" cellspacing="0" width="100%">
-<tbody>
-<tr>
-<th align="right">Køn:</th>
-<td nowrap="nowrap"><input checked="checked" name="sex" onclick="man = true" type="radio" value="man" /> Mand <input name="sex" onclick="man = false" type="radio" value="woman" /> Kvinde</td>
-</tr>
-<tr>
-<th align="right">Alder:</th>
-<td><input maxlength="3" name="age" size="3" type="text" value="" /> år</td>
-</tr>
-<tr>
-<th align="right">Højde:</th>
-<td><input maxlength="3" name="height" size="3" type="text" value="" /> cm</td>
-</tr>
-<tr>
-<th align="right">Vægt:</th>
-<td><input maxlength="3" name="weight" size="3" type="text" value="" /> kg</td>
-</tr>
-<tr>
-<th align="right">Body mass index (BMI):</th>
-<td><input disabled="disabled" name="BMI" size="6" type="text" value="" /><small>(udregnes)</small></td>
-</tr>
-<tr>
-<th align="right">Fedtmasse:</th>
-<td><input disabled="disabled" name="fedtmasse" size="6" type="text" value="" /> kg <small>(udregnes)</small></td>
-</tr>
-<tr>
-<th align="right">Fedtprocent:</th>
-<td><input disabled="disabled" name="fedtprocent" size="6" type="text" value="" /> <small>(udregnes)</small></td>
-</tr>
-<tr>
-<td align="center" colspan="2">
-<hr size="2" width="95%" /><input class="submit" name="SUBMIT2" type="submit" value="Udregn" /> <input class="submit" name="RESET2" onclick="Reset(this.form); return true" type="reset" value="Nulstil" /><br />
-<hr /><center><font size="-2"><a href="http://web.archive.org/web/20030210183727/http://www.image.dk/%7Epetermad/">Peter H. S. Madsen</a> skrev javascript til udregningen.</font></center></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
+</script>
+      
+<form action="#" onsubmit="Calculate(this); return false">
+   <div data-role="fieldcontain">
+<label>Køn:</label>
+<input checked="checked" name="sex" onclick="man = true" type="radio" value="man" /> Mand <input name="sex" onclick="man = false" type="radio" value="woman" /> Kvinde
+  </div>
+   <div data-role="fieldcontain">
+     <label>Alder:</label>
+<input maxlength="3" name="age" size="3" type="number" value="" data-clear-btn="true" placeholder="Din alder i år" /> år
+  </div>
+   <div data-role="fieldcontain">
+<label>Højde:</label>
+<input maxlength="3" name="height" size="3" type="number" value="" data-clear-btn="true" placeholder="Din højde i cm" /> cm
+  </div>
+   <div data-role="fieldcontain">
+<label>Vægt:</label>
+<input maxlength="3" name="weight" size="3" type="number" value="" data-clear-btn="true" placeholder="Din vægt i kg" /> kg
+  </div>
+   <div data-role="fieldcontain">
+<label>Body mass index (BMI):</label>
+<input disabled="disabled" name="BMI" size="6" type="text" value="" /><small>(udregnes)</small>
+  </div>
+   <div data-role="fieldcontain">
+<label>Fedtmasse:</label>
+<input disabled="disabled" name="fedtmasse" size="6" type="text" value="" /> kg <small>(udregnes)</small>
+  </div>
+   <div data-role="fieldcontain">
+<label>Fedtprocent:</label>
+<input disabled="disabled" name="fedtprocent" size="6" type="text" value="" /> <small>(udregnes)</small>
+  </div>
+<input class="submit" name="SUBMIT2" type="submit" data-role="button" value="Udregn" data-icon="check" /> <input data-role="button" class="submit" name="RESET2" onclick="Reset(this.form); return true" type="reset" value="Nulstil" />
 </form>
       
        <script type="text/javascript" src="phonegap.js"></script>
