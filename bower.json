@@ -1,0 +1,19 @@
+{
+  "name": "motionsplan.dk",
+  "version": "0.0.1",
+  "authors": [
+    "Lars Olesen <lars@intraface.dk>"
+  ],
+  "license": "GLP",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "jquery-mobile": "~1.4.3"
+  }
+}
